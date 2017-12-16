@@ -5,37 +5,53 @@
 \usepackage{pdfpages}
 \usepackage{float}
 \usepackage{fullpage}
+\usepackage{titling}
 \usepackage{hyperref}
 \usepackage[bottom]{footmisc}
 \usepackage[toc, page]{appendix}
 \usepackage{booktabs}
 \graphicspath{ {img/} }
 
+%Create subtitle command
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\large#1\end{center}
+	\vskip0.5em}%
+}
+
 % Title Page
 \title
 {
-	\textbf{Business Case: \\ Aasted Service Department} \\
-	Individual Report
+	\textbf{Individual Reflections: \\ My learnings and advice for next years' BFOP students} \\
+	\textbf{Course:} Business Processes and Organization
 }
 
 \author
 {
-	Martin Edvardsen (medv@itu.dk) \\
+	Martin Edvardsen (medv@itu.dk), Group B \\
+}
+
+\subtitle
+{
+	~\\
+	I accept that my name is visible when this report is put on LearnIt for next years BFOP Students: No.
 }
 
 
 
 \begin{document}
 \maketitle
-\tableofcontents
-\newpage
-\listoffigures
-\newpage
-\listoftables
-\newpage
 
-\chapter{Summary}
-
+\chapter{Tools and Techniques}
+	\label{tools}
+	\input{chapters/tools}
+\chapter{Future Reflections}
+	\label{future}
+	\input{chapters/future}
+\chapter{Advice}
+	\label{advice}
+	\input{chapters/advice}
 
 \bibliographystyle{plain}
 \bibliography{biblio}
